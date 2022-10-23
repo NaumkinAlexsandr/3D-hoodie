@@ -1,0 +1,198 @@
+@font-face {
+  src: url('../fonts/assassin.woff2') format('woff2');
+  font-family: 'assassin-st';
+  font-weight: 700;
+  font-style: italic;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.showcase {
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.showcase::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  box-shadow: inset 0px 0px 500px #000;
+}
+
+.showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/light.png);
+  background-position: center -65px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: ligth 4s ease-in-out infinite;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 150px;
+  z-index: 1;
+  top: 40px;
+  font-family: assassin-st, sans-serif;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.header span {
+  color: #cc8869;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 0 50px;
+}
+
+.content-wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/glow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: glow 2s ease-in-out infinite;
+}
+
+img {
+  width: 45%;
+  opacity: 0.5;
+}
+
+/* ---Slider--- */
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slider_item p {
+  margin-top: 10%;
+  font-family: assassin-st, sans-serif;
+  font-size: 35px;
+}
+
+/* Стрелка */
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 0;
+}
+
+/* Стрелка не активная */
+.slider .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+/* Стрелка влево */
+.slider .slick-arrow.slick-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: rotateZ(270deg);
+  left: -40px;
+  background-image: url(../img/logo3.png);
+  background-size: 100%;
+  opacity: 0.3;
+}
+
+.slider .slick-arrow.slick-prev:hover {
+  opacity: 0.6;
+}
+
+/* Стрелка вправо */
+.slider .slick-arrow.slick-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: -40px;
+  transform: rotateZ(90deg);
+  background-image: url(../img/logo3.png);
+  background-size: 100%;
+  opacity: 0.3;
+}
+
+.slider .slick-arrow.slick-next:hover {
+  opacity: 0.6;
+}
+
+/* ---Video--- */
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+@keyframes ligth {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

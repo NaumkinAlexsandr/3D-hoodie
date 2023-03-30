@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const showSlider = new Swiper(".showcase-carousel", {
     loop: true,
     speed: 1800,
+    slidesPerView: 3,
     centeredSlides: true,
     navigation: {
       nextEl: ".showcase-navigation__next",
